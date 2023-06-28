@@ -1,0 +1,580 @@
+/* Typography */ 
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif; 
+  }
+
+  /* Header */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .logo li{
+    position: absolute;
+    display: flex;
+    list-style: none;
+    padding: 5px 5px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex; 
+  }
+  nav li {
+    padding: 10px 10px;
+  }
+  header {
+    position: absolute;
+    background: url('Silksong_Website_Header.gif');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    display: flex; 
+  }
+  header .title {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+  }
+
+  /* Titles */
+  h1 {
+    margin-top: 92vh;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  /* @media only screen and (max-width:600px) {
+    h1 {margin-top: 90%;}
+  } */
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center; 
+  }
+
+  /* Gallery */
+  .distantland h3,
+  .skills h3,
+  .beauty h3,
+  .musics h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .gallery p,
+  .gallery1 p,
+  .gallery2 p,
+  .presskit p {
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .gallery img {
+    margin-left: 20px;
+    width: 47%;
+  }
+  
+  .distantland {
+    margin-left: 40px;
+    text-align: left;
+    margin-right: 20px;
+  }
+
+  /* Gallery1 */
+  .gallery1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .skills {
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 3%;
+  }
+
+  .gallery1 img {
+    margin-left: 20px;
+    width: 47%;
+    margin-right: 20px;
+  }
+
+  /* Gallery2 */
+  .gallery2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .beauty {
+    margin-left: 40px;
+    text-align: left;
+    margin-right: 20px;
+  }
+
+  .gallery2 img {
+    margin-left: 20px;
+    width: 47%;
+  }
+
+  /* Youtube Trailer */
+  iframe {
+    position: relative;
+    left: 17%;
+    margin-bottom: 40px;
+  }
+
+  /* Download */
+  .download {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  /* Soundtrack */
+  .soundtrack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin: 0 auto;
+  }
+  
+  .musics {
+    margin-left: 20%;
+    text-align: left;
+    margin-right: 3%;
+  }
+  
+  .soundtrack img {
+    margin-left: 20px;
+    width: 47%;
+    margin-right: 20%;
+  }
+
+  .musics li > a > button {
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .musics li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .musics li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+  }
+
+  /* Gallery Slideshow */
+  .mySlides {
+    display: none;
+  }
+  img {
+      vertical-align: middle;
+  }
+  /* Slideshow container */
+  .slider{
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    clip-path: circle(0% at 0 100%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(300% at 0 100%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 50%;
+  }
+  
+  .navigation{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .slider .slide img {
+      left: 0;
+      height: 100%;
+      width: 200%;
+    }
+  }
+
+  .divider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* Press Kit */
+  .presskit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+  
+  .kit {
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 3%;
+  }
+  
+  .kit h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .presskit img {
+    margin-left: 20px;
+    width: 70%;
+    margin-bottom: 40px;
+  }
+
+  .kit li > a > button {
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .kit li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .kit li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Unity */
+  .unity {
+    position: relative;
+    background: url('Silksong_Promo.jpg');
+    background-size: cover;
+    background-position: center;
+  
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay {
+    background: #000;
+    opacity: 0.5; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .unity img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .unity p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .unity li > a > button {
+    position: relative;
+    z-index: 1;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unity li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .unity li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: 40px;
+  }
+
+  /* The Team */
+  .creator {
+    position: relative;
+    background: hsla(352.8260869565217,79.99999999999999%,54.90196078431373%,1);
+    background-size: cover;
+    background-position: center;
+  
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .creator .tcbutton li > a > button {
+    position: relative;
+    z-index: 1;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: hsla(352.8260869565217,79.99999999999999%,54.90196078431373%,1);
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tcbutton li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tcbutton li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: 40px;
+  }
+
+  .tcbutton p {    
+    position: relative;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .creator .profile,
+  .creator .profile1,
+  .creator .profile2 {
+    width: 25%;
+    text-align: center;
+  }
+    
+  .profile h4,
+  .profile1 h4,
+  .profile2 h4 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 0px;
+    color: white;
+  }
+
+  .profile img,
+  .profile1 img,
+  .profile2 img {
+    margin-left: 20px;
+    margin-right: 100px;
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  .creator .tctext p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+    /* Footer */ 
+  footer {
+    clear: both;
+    text-align: center;
+    padding: 5px 5px; 
+    background-color: hsla(352.8260869565217,79.99999999999999%,54.90196078431373%,1);
+  }
+
+  footer p {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  footer p a {
+    color: blue;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
